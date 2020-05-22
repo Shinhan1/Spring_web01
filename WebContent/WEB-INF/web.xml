@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>spring_web01</display-name>
+  
+  <!-- 서블릿을 사용하고 싶으면 web.xml에 서블릿이 존재함을 알려야 함. -->
+  <!-- : 모든 연결 요청을 DispatcherServlet이 담당하도록 설정 -->
+  
+  <servlet>
+  	<servlet-name>dispatcher</servlet-name> <!-- 이름은 쓰는 사람 마음 -->
+  	<servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+  </servlet>
+  
+  <!-- 사용자가 페이지를 선택해서 ~~.do 주소로 접근하면 그 서블릿은 servlet - class에 있다 -->
+  <servlet-mapping>
+  	<servlet-name>dispatcher</servlet-name>
+  	<url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  
+  
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>
