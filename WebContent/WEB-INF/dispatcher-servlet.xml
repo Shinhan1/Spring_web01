@@ -20,6 +20,10 @@
 	</bean>
 	
 	<!-- Controller -->
+	<!-- Servlet 주소를 Bean id에다 적어야 함. jsp와는 다름 -->
+	<bean id="/he.do" class="kr.co.goott.www.HelloController">
+	
+</bean>
 	
 	
 
