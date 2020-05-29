@@ -18,7 +18,7 @@ public class HelloController implements Controller {
 		
 //		mav.addObject(속성 이름(변수 이름), 속성값(데이터));
 		mav.addObject("msg", "Hello Spring WebMVC world!");
-	
+		
 		mav.setViewName("hello");
 		
 		return mav;
